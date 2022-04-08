@@ -2,6 +2,7 @@
 /* Secondari text color  #757575;  */
 /* Logo text color #2196F3 */
 /* Hero text color #FFFFFF; */
+/* borders color #ECECEC */
 /* Link text color rgba(255, 255, 255, 0.6);
 /* Hero and footer background color #2F303A */
 /*  Secondori background color #F5F4FA */
@@ -31,12 +32,17 @@ html {
   --button-text-primary-color: #fff;
   --button-bgc-secondary-color: #f5f4fa;
   --button-secondary-text-color: #212121;
+  --main-borders-color: #ececec;
 }
 
 body {
   color: var(--primary-text-color);
   background-color: var(--main-bgc-color);
   font-family: roboto, sans-serif;
+}
+
+header {
+  border-bottom: 1px solid var(--main-borders-color);
 }
 
 .list {
@@ -54,17 +60,25 @@ body {
   margin-bottom: 50px;
 }
 
-/* Header elements */
-
 .container {
-  display: flex;
-  align-items: center;
   margin-left: auto;
   margin-right: auto;
   width: 1230px;
   padding: 15px;
   padding-top: 0;
   padding-bottom: 0;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+/* Header elements */
+
+.header-container {
+  display: flex;
+  align-items: center;
 }
 
 .logo-nav-box {
@@ -156,20 +170,10 @@ body {
 }
 
 /* Hero Section */
+
 .hero {
   background-color: var(--footer-bgc-color);
   text-align: center;
-}
-
-.hero-container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1230px;
-  padding: 15px;
-  padding-top: 0;
-  padding-bottom: 0;
-  text-align: center;
-  justify-content: center;
 }
 
 .hero-title {
@@ -215,15 +219,6 @@ body {
 
 /* Features Section */
 
-.features-container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1230px;
-  padding: 15px;
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
 .features-main-title {
   font-size: 0;
   margin: 0;
@@ -233,8 +228,7 @@ body {
 .features-flex-box {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 94px;
-  margin-bottom: 94px;
+  justify-content: space-between;
 }
 
 .features-item {
@@ -259,26 +253,14 @@ body {
 
 /* What We Do Section */
 
-.task-container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1230px;
-  padding: 15px;
-  padding-top: 0;
-  padding-bottom: 0;
-  text-align: center;
-}
-
 .tasks-title {
   color: var(--title-text-color);
   margin-top: 0;
-  margin-bottom: 50;
 }
 
 .tasks-flex-box {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 94px;
 }
 
 /* Team */
@@ -288,12 +270,6 @@ body {
 }
 
 .team-container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1230px;
-  padding: 15px;
-  padding-top: 0;
-  padding-bottom: 0;
   text-align: center;
 }
 
@@ -317,7 +293,6 @@ body {
 
 .team-title {
   display: inline-block;
-  margin-top: 94px;
 }
 
 .name {
@@ -342,20 +317,10 @@ body {
 /* Portfolio Pages */
 /* Filters Button */
 
-.filters-container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1230px;
-  padding: 15px;
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
 .secondary-button {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
-  margin-top: 94px;
 }
 
 .secondary-button-item:not(:last-child) {
@@ -395,17 +360,20 @@ body {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  display: block;
-  margin-top: 20px;
-  margin-left: 24px;
-
-  border: 10px solis var(--primary-text-color);
+}
+.exemp-border {
+  border-left: 1px solid var(--main-borders-color);
+  border-right: 1px solid var(--main-borders-color);
+  border-bottom: 1px solid var(--main-borders-color);
+  padding-left: 24px;
+  padding-top: 20px;
+  padding-bottom: 24px;
+  padding-right: 20px;
 }
 
 .portfolio {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 94px;
 }
 
 .portfolio-link-item {
@@ -438,24 +406,12 @@ body {
   line-height: 1.87;
   letter-spacing: 0.03em;
   display: block;
-  margin-bottom: 20px;
-  margin-left: 24px;
 }
 
 /* Footer */
-.footer-container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1230px;
-  height: 252px;
-  padding: 15px;
-  padding-top: 0;
-  padding-bottom: 0;
-}
 
 .footer-logo {
   display: inline-block;
-  margin-top: 60px;
   margin-bottom: 20px;
   color: #fff;
   font-family: "Raleway";
@@ -473,6 +429,8 @@ body {
 
 .footer {
   background-color: var(--footer-bgc-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .map {
