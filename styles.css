@@ -20,6 +20,12 @@ html {
   box-sizing: inherit;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 :root {
   --primary-text-color: #757575;
   --title-text-color: #212121;
@@ -63,10 +69,8 @@ header {
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 1230px;
-  padding: 15px;
-  padding-top: 0;
-  padding-bottom: 0;
+  width: 1200px;
+  padding: 0 15px;
 }
 
 .section {
@@ -174,6 +178,7 @@ header {
 .hero {
   background-color: var(--footer-bgc-color);
   text-align: center;
+  padding: 200px 0;
 }
 
 .hero-title {
@@ -219,10 +224,18 @@ header {
 
 /* Features Section */
 
-.features-main-title {
-  font-size: 0;
-  margin: 0;
+.features-main-title,
+.filters-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
   padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .features-flex-box {
@@ -253,6 +266,10 @@ header {
 
 /* What We Do Section */
 
+.tasks {
+  padding-top: 0;
+}
+
 .tasks-title {
   color: var(--title-text-color);
   margin-top: 0;
@@ -281,23 +298,22 @@ header {
 .team-member {
   background-color: var(--main-bgc-color);
   width: 270px;
-  margin-bottom: 94px;
 }
 
 .team-title,
 .name {
   color: var(--title-text-color);
-  margin-top: 0;
-  margin-bottom: 50;
+  /* margin-top: 0;
+  margin-bottom: 50; */
 }
 
-.team-title {
-  display: inline-block;
+.team-name-title {
+  padding: 30px 0;
 }
 
 .name {
   display: block;
-  margin-top: 30px;
+  margin: 0;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
@@ -307,7 +323,7 @@ header {
 
 .work-title {
   display: block;
-  margin-bottom: 30px;
+  margin-top: 10px;
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
@@ -325,12 +341,6 @@ header {
 
 .secondary-button-item:not(:last-child) {
   margin-right: 8px;
-}
-
-.filters-title {
-  font-size: 0;
-  margin: 0;
-  padding: 0;
 }
 
 .button.secondary {
@@ -402,6 +412,7 @@ header {
 
 .portfolio-description {
   color: var(--primary-text-color);
+  margin-top: 4px;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
@@ -435,7 +446,6 @@ header {
 
 .map {
   display: inline-block;
-  margin-bottom: 9px;
   color: var(--button-text-primary-color);
   font-size: 14px;
   line-height: 1.71;
@@ -451,7 +461,6 @@ header {
 
 .contact {
   display: inline-block;
-  margin-bottom: 9px;
   color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
   line-height: 1.71;
@@ -462,4 +471,8 @@ header {
 .contact:hover,
 .contact:focus {
   color: var(--focus-hover-color);
+}
+
+.contact-item li:not(:last-child) {
+  margin-bottom: 9px;
 }
